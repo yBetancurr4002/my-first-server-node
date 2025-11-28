@@ -1,10 +1,10 @@
 // Common JS
-
+require('dotenv').config();
 const express = require('express'); // importando express
 const personasRoutes = require('./routes/personas.routes.js');
 
 const app = express(); // invocando una funcion - Inicar un servidor express
-const port = 3000; 
+const port = process.env.PORT_SERVER || 3000; 
 app.use(express.json());
 
 app.get('/', (req, res) => {
