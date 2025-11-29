@@ -72,6 +72,8 @@ INSERT INTO grupos (id, nombre_grupo) VALUES
 
 select * from grupos;
 
+UPDATE grupos SET nombre_grupo = 'XXX' where id = 'GX';
+
 
 -- ### 2.4 Notas
 CREATE TABLE notas (
@@ -84,7 +86,7 @@ CREATE TABLE notas (
 );
 
 INSERT INTO notas (id, estudiante_id, nombre_nota, valor, porcentaje) VALUES
--- Notas de Ana (E1)
+
 ('N1', 'E1', 'Quiz 1', 4.8, 10.00),
 ('N2', 'E1', 'Proyecto Final', 5.0, 40.00),
 

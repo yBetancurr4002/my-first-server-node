@@ -2,6 +2,8 @@
 require('dotenv').config();
 const express = require('express'); // importando express
 const personasRoutes = require('./routes/personas.routes.js');
+const gruposRoutes = require('./routes/grupos.routes.js');
+const estudiantesRoutes = require('./routes/estudiantes.routes.js');
 
 const app = express(); // invocando una funcion - Inicar un servidor express
 const port = process.env.PORT_SERVER || 3000; 
@@ -12,6 +14,8 @@ app.get('/', (req, res) => {
 }); // metodo get de mi server
 
 app.use('/api/personas', personasRoutes);
+app.use('/api/grupos', gruposRoutes);
+app.use('/api/estudiantes', estudiantesRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
